@@ -1,0 +1,103 @@
+<head>
+  <title>Aryansh Shrivastava</title>
+  <link rel="shortcut icon" type="image/jpeg" href="/favicon.jpeg">
+  
+<style>
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font: 20px Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
+<zero-md src="Introduction.md"></zero-md>
+<br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'About Me')" id="defaultOpen">
+    <zero-md src="About Me.md"></zero-md>
+  </button>
+  <button class="tablinks" onclick="openTab(event, 'Organizations')" id="defaultOpen">
+    <zero-md src="Organizations.md"></zero-md>
+  </button>
+  <button class="tablinks" onclick="openTab(event, 'Projects')">
+    <zero-md src="Projects.md"></zero-md>
+  </button>
+  <button class="tablinks" onclick="openTab(event, 'Publications')">
+    <zero-md src="Publications.md"></zero-md>
+  </button>
+</div>
+
+<div id="About Me" class="tabcontent">
+</div>
+
+<div id="Organizations" class="tabcontent">
+</div>
+
+<div id="Projects" class="tabcontent">
+</div>
+
+<div id="Publications" class="tabcontent">
+<br>
+<zero-md src="Modular_Arithmetic_Book.md"></zero-md>
+<br>
+<p align="center">
+  
+<iframe src="The_Art_of_Modular_Arithmetic.pdf#view=fitH" width="50%" height="80%"></iframe>
+  
+</p>
+</div>
+
+<br>
+<zero-md src="Footer.md"></zero-md>
+
+<script>
+function openTab(evt, name) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(name).style.display = "block";
+  
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+document.getElementById("defaultOpen").click();
+</script>
