@@ -6,4 +6,3 @@ My book _The Art of Modular Arithmetic_ takes the nontraditional approach of tea
 <p align="center">
 <iframe src="The_Art_of_Modular_Arithmetic.pdf#view=fitH" width="50%" height="80%"></iframe>
 </p>
-<br>
